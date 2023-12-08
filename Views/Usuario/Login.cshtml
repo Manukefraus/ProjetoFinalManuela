@@ -1,0 +1,32 @@
+﻿@model ProjetoFinalManuela.Models.Usuario
+<link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+@{
+    Layout = null;
+}
+<div class="text-center">
+    <img class="img" src="~/img/logo.png" />
+    <h1>Faça o login para acessar o sistema</h1>
+    <form asp-action="Login">
+        <div class ="input-field">
+            <label asp-for="UsuarioEmail"></label>
+            <div>
+                <input class="input-email" asp-for="UsuarioEmail" />
+            <span asp-validation-for="UsuarioEmail"></span>
+            </div>
+
+        </div>
+        <div class="input-field">
+            <label asp-for="UsuarioSenha"></label>
+            <div>
+                <input class="input-email" asp-for="UsuarioSenha" type="password" />
+                <span asp-validation-for="UsuarioSenha"></span>
+            </div>
+        </div>
+        <br />
+        <h4>@ViewBag.Mensagem</h4>
+        <br />
+        <div class="input-field">
+            <input class="btn-principal" type="submit" value="Entrar" />
+        </div>
+    </form>
+</div>

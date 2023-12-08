@@ -1,0 +1,52 @@
+﻿.geral {
+    background-color: #FF848E;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    width: 80%;
+    height: 40%;
+    margin-left: 10%;
+}
+
+.cadastro {
+    text-align: center;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.img {
+    width: 140px;
+    height: 130px;
+}
+
+.logo {
+    text-align: center;
+}
+
+.titulo {
+    margin-top: -9px;
+    margin-bottom: 38px;
+}
+
+.data {
+    text-align: center;
+    justify-content: space-evenly;
+    display: flex;
+    margin-top: -14px;
+    margin-bottom: 30px;
+}
+
+.linha {
+    width: 100%;
+}
+
+.exame {
+    margin-left: 25px;
+}
+
+.resultado {
+    margin-left: 25px;
+}
+
+.metodo {
+    margin-left: 25px;
+}

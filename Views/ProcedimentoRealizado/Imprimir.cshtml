@@ -1,0 +1,45 @@
+﻿@model ProjetoFinalManuela.Models.ProcedimentoRealizado
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/Imprimir.css" asp-append-version="true" />
+<div>
+    <main class="geral">
+        <header class="logo">
+            <img class="img" src="~/img/logo.png" alt="logotipo">
+            <h1 class="titulo">Laboratório De Análises Clínicas</h1>
+        </header>
+        <div>
+            <div class="data">
+                <span>Data da Coleta: @Html.DisplayFor(model => model.DataRealizacao)</span>
+            </div>
+            <div class="cadastro">
+                <span>Paciente: @Html.DisplayFor(model => model.Cliente.ClienteNome)</span>
+                <span>Sexo: @Html.DisplayFor(model => model.Cliente.ClienteSexo)</span>
+                <span>CPF: @Html.DisplayFor(model => model.Cliente.ClienteCpf)</span>
+                <span>Colaborador: @Html.DisplayFor(model => model.Colaborador.ColaboradorNome)</span>
+                <span>Clínica: @Html.DisplayFor(model => model.LocalRealizacao.LocalRealizacaoNome)</span>
+            </div>
+            <hr class="linha">
+            <div class="exame">
+                <h3>@Html.DisplayFor(model => model.Procedimento.ProcedimentoNome)</h3>
+                <strong>@Html.DisplayFor(model => model.Procedimento.ProcedimentoObservacao)</strong>
+            </div>
+            <br>
+            <div class="resultado">
+                <span>Resultado: @Html.DisplayFor(model => model.ObservacaoRealizacao)</span>
+                <br>
+                <br>
+                <span>Valores de Referência: </span>
+                <br>
+                <span>Criança: 60 a 100 mg/dL</span>
+                <br>
+                <span>Adulto: 74 a 100 mg/dL</span>
+            </div>
+            <hr class="linha">
+            <div class="metodo">
+                <h2>Metodologia: @Html.DisplayFor(model => model.Procedimento.TipoProcedimento.TipoProcedimentoNome)</h2>
+            </div>
+        </div>
+    </main>
+</div>
